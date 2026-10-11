@@ -71,10 +71,10 @@ export function TranscriptPanel({
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
-              <span className="font-semibold text-gray-900 text-xs">{group.speaker}</span>
+              <span className="font-semibold text-gray-900 dark:text-white text-xs">{group.speaker}</span>
               <button
                 onClick={() => onSeek(group.segs[0].startTime)}
-                className="text-xs text-gray-400 hover:text-brand-600 font-mono transition-colors"
+                className="text-xs text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 font-mono transition-colors"
               >
                 {formatTime(group.segs[0].startTime)}
               </button>
@@ -90,20 +90,20 @@ export function TranscriptPanel({
                     ref={isActive ? activeRef : undefined}
                     className={`
                       group relative flex items-start gap-2 rounded-lg px-2 py-1.5 transition-colors cursor-pointer
-                      ${isActive ? 'bg-brand-50 border border-brand-200' : 'hover:bg-gray-50'}
-                      ${isHighlighted ? 'ring-1 ring-yellow-300 bg-yellow-50' : ''}
+                      ${isActive ? 'bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800' : 'hover:bg-gray-50 dark:hover:bg-gray-800'}
+                      ${isHighlighted ? 'ring-1 ring-yellow-300 dark:ring-yellow-600 bg-yellow-50 dark:bg-yellow-900/10' : ''}
                     `}
                     onClick={() => onSeek(seg.startTime)}
                   >
                     {isHighlighted && (
                       <Star size={10} className="flex-shrink-0 mt-1 text-yellow-500 fill-yellow-400" />
                     )}
-                    <p className="text-gray-700 text-sm leading-relaxed flex-1">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed flex-1">
                       {highlightText(seg.text, searchQuery)}
                     </p>
                     <button
                       onClick={e => { e.stopPropagation(); onHighlight(seg); }}
-                      className={`flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity p-1 rounded hover:bg-yellow-100 ${isHighlighted ? 'opacity-100 text-yellow-500' : 'text-gray-400'}`}
+                      className={`flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity p-1 rounded hover:bg-yellow-100 dark:hover:bg-yellow-900/30 ${isHighlighted ? 'opacity-100 text-yellow-500' : 'text-gray-400'}`}
                       title="Highlight this moment"
                     >
                       <Bookmark size={12} />
