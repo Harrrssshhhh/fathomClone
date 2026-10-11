@@ -6,9 +6,10 @@ A polished AI meeting notetaker web application inspired by Fathom, built as par
 
 ## Live Demo
 
-- **Deployed Application:** `ADD_YOUR_DEPLOYED_URL_HERE`
-- **Public Repository:** `ADD_YOUR_GITHUB_REPOSITORY_URL_HERE`
+- **Deployed Application:** https://fathomclone.netlify.app/
+- **Public Repository:** https://github.com/Harrrssshhhh/fathomClone
 - **Walkthrough Video:** `ADD_YOUR_WALKTHROUGH_VIDEO_URL_HERE`
+
 
 ## Features
 
